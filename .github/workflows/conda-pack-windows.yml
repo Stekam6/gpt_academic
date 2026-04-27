@@ -91,7 +91,7 @@ jobs:
       # Argument 1 = Projektpfad (für requirements.txt-Scan)
       # Syft scannt intern ./conda-env (entpackte Umgebung mit allen pip-Paketen)
       - name: Run detector
-        run: java -jar dynamicDetection/detectionSystem-1.0-SNAPSHOT-all.jar . #/workspace
+        run: java -jar dynamicDetector/detectionSystem-1.0-SNAPSHOT-all.jar . #/workspace
 
       # Ergebnisse speichern
       - name: Upload detection results
