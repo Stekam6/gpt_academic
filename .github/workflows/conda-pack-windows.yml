@@ -45,9 +45,10 @@ jobs:
       shell: pwsh
       run: |
         mkdir workspace
-        Get-ChildItem -Exclude "workspace" | Copy-Item -Destination workspace -Recurse
-        Remove-Item -Path workspace/.git* -Recurse -Force -ErrorAction SilentlyContinue
         Copy-Item gpt.tar.gz workspace/ -Force
+    #   Get-ChildItem -Exclude "workspace" | Copy-Item -Destination workspace -Recurse
+    #   Remove-Item -Path workspace/.git* -Recurse -Force -ErrorAction SilentlyContinue
+        
 
     - name: Upload packed files
       uses: actions/upload-artifact@v4
