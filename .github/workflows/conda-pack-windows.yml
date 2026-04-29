@@ -63,9 +63,9 @@ jobs:
     steps:
       # Nur den Detector-Ordner auschecken — keine Repo-requirements.txt im Root
       - uses: actions/checkout@v4
-        with:
-          sparse-checkout: dynamicDetector
-          sparse-checkout-cone-mode: false
+      #  with:
+      #    sparse-checkout: dynamicDetector
+      #    sparse-checkout-cone-mode: false
       - name: Setup Java 21 (Temurin)
         uses: actions/setup-java@v4
         with:
